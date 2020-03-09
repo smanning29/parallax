@@ -1,36 +1,76 @@
 //author styles
- body{
-    background-color: $bg-color;
- }
-
  //wraps around body
  #container {
-    background-color: $container-color;
-    width:100%; 
-	max-width:1400px;
-	margin:0px auto;
-	padding:0px;
-	box-sizing:border-box;
+    // background-color: $container-color;
+    // width:100%; 
+	// max-width:1400px;
+	// margin:0px auto;
+	// padding:0px;
+	// box-sizing:border-box;
 
-	display:flex;
-	flex-wrap:wrap; 
-	flex-direction:row; 
-	align-content:flex-start; 
-	align-items:stretch;
+	// display:flex;
+	// flex-wrap:wrap; 
+	// flex-direction:row; 
+	// align-content:flex-start; 
+    // align-items:stretch;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: $bg-color;
+ } 
+
+
+ div{
+  box-sizing: border-box;
  }
 
- header{
-     width: 100%;
-     text-align: center;
-     h1{
-         font-family: $display-font;
-     }//h1
+ img {
+   max-width: 100%;
  }
 
+ #group1 {
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    font-size: 20px;
+    box-sizing: border-box;
+    img{
+      max-width: 100%;
+    }
+  }
 
+  .background {
+    transform: translateZ($back) scale($back-scale);
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 100px;
+  }
 
- p {
-     font-family: $body-font;
-     padding-left: 20px;
-     padding-right: 20px;
- }
+  .middle {
+    transform: translateZ($front) scale($front-scale);
+    top: -400px;
+    height: 500px;
+    width: 50%;
+    position: absolute;
+    padding-top: 100px;
+    font-family: $body-font;
+    font-size: 5em;
+  }
+  
+  .foreground {
+    position: absolute;
+    top: 0px;
+    width: 100%; 
+    .text{
+    top: -10px;
+    background-color: $desert;
+    padding: 20px;
+  }

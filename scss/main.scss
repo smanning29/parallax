@@ -4,4 +4,7 @@
 @import "layout";
 @import "precss";
 @import "postcss";
-@import "normalize"
+@import "normalize";
+@import 'core';
+@import 'easing';
+@import 'animations';

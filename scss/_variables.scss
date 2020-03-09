@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat&display=swap');
 
+$back: -3px;
+$back-scale: 4;
+$mid: -2px;
+$mid-scale: 3;
+$front: -1px;
+$front-scale: 2;
+
 //COLORS
-$bg-color: white;
-$container-color: rgb(235, 200, 255);
+$bg-color: #c6ecf7;
+$desert: #de9d77;
+$sky: #42b4fa;
 
 //FONTS
 $display-font: 'Cormorant Garamond', serif;
