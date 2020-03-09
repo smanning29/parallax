@@ -8,7 +8,8 @@
   perspective: 1px;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: #c6ecf7; }
+  background: #c6ecf7;
+  height: 100%; }
 
 div {
   box-sizing: border-box; }
@@ -17,39 +18,39 @@ img {
   max-width: 100%; }
 
 header {
-  color: #42b4fa; }
+  background-color: #42b4fa;
+  padding: 20px; }
+  header h1 {
+    text-align: center;
+    color: black; }
 
-#group1 {
-  height: 500px;
-  position: relative;
-  transform-style: preserve-3d;
-  font-size: 20px;
-  top: 100px;
-  box-sizing: border-box; }
-  #group1 .background {
-    transform: translateZ(-3px) scale(1);
-    height: 1000px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    padding-top: 100px; }
-  #group1 .middle {
-    transform: translateZ(-1px) scale(1);
-    top: -400px;
-    height: 500px;
-    width: 100%;
-    position: absolute;
-    padding-top: 100px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 5em; }
-  #group1 .foreground {
-    position: absolute;
-    top: 0px;
-    width: 100%; }
-    #group1 .foreground .text {
-      top: -10px;
-      background-color: #de9d77;
-      padding: 20px; }
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  .parallax .group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d; }
+    .parallax .group .layer-base {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(0); }
+      .parallax .group .layer-base .text {
+        background-color: #de9d77;
+        padding: 20px;
+        top: -20px; }
+    .parallax .group .layer-back {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(-1px) scale(2); }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

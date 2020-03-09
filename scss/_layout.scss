@@ -23,6 +23,7 @@
     overflow-x: hidden;
     overflow-y: hidden;
     background: $bg-color;
+    height: 100%;
  } 
 
 
@@ -34,43 +35,44 @@
    max-width: 100%;
  }
 
- #group1 {
-    height: 500px;
+ header {
+   background-color: $sky;
+   padding: 20px;
+   h1 {
+    text-align: center;
+    color: black;
+   }
+ }
+
+ .parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .group {
     position: relative;
+    height: 100vh;
     transform-style: preserve-3d;
-    font-size: 20px;
-    box-sizing: border-box;
-    img{
-      max-width: 100%;
+    .layer-base {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(0);
+      .text {
+        background-color: $desert;
+        padding: 20px;
+        top: -20px;
+      }
+    }
+    .layer-back {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateZ(-1px) scale(2);
     }
   }
-
-  .background {
-    transform: translateZ($back) scale($back-scale);
-    height: 1000px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    padding-top: 100px;
-  }
-
-  .middle {
-    transform: translateZ($front) scale($front-scale);
-    top: -400px;
-    height: 500px;
-    width: 50%;
-    position: absolute;
-    padding-top: 100px;
-    font-family: $body-font;
-    font-size: 5em;
-  }
-  
-  .foreground {
-    position: absolute;
-    top: 0px;
-    width: 100%; 
-    .text{
-    top: -10px;
-    background-color: $desert;
-    padding: 20px;
-  }
+}
