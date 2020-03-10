@@ -36,15 +36,54 @@
  }
 
  header {
-   background-color: $sky;
-   padding: 20px;
+   //background-color: $sky;
+   padding: 5px;
    h1 {
     text-align: center;
-    color: black;
+    color: white;
+    font-family: $display-font;
+    font-size: 4em;
+    letter-spacing: 4px;
    }
  }
 
- .parallax {
+//  .parallax {
+//   perspective: 1px;
+//   height: 100vh;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   .group {
+//     position: relative;
+//     height: 100vh;
+//     transform-style: preserve-3d;
+//     background: 50% 50% / cover;
+//     .layer-base {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       transform: translateZ(0);
+//       .text {
+//         background-color: $desert;
+//         padding: 20px;
+//         top: -20px;
+//         font-family: $body-font;
+//         font-size: 1.5em;
+//       }
+//     }
+//     .layer-back {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       transform: translateZ(-1px) scale(2);
+//     }
+//   }
+// }
+
+.parallax {
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
@@ -53,6 +92,7 @@
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
+    background: 50% 50% / cover;
     .layer-base {
       position: absolute;
       top: 0;
@@ -64,6 +104,8 @@
         background-color: $desert;
         padding: 20px;
         top: -20px;
+        font-family: $body-font;
+        font-size: 1.5em;
       }
     }
     .layer-back {
@@ -75,4 +117,18 @@
       transform: translateZ(-1px) scale(2);
     }
   }
+}
+
+#one {
+  background: url("../img/rt1.png") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+#two {
+  background: url("../img/rt4.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+#group2 {
+  top: 1000px;
 }

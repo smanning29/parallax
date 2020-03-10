@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Zilla+Slab&display=swap");
 #container {
   position: fixed;
   top: 0;
@@ -18,11 +18,13 @@ img {
   max-width: 100%; }
 
 header {
-  background-color: #42b4fa;
-  padding: 20px; }
+  padding: 5px; }
   header h1 {
     text-align: center;
-    color: black; }
+    color: white;
+    font-family: "Alfa Slab One", cursive;
+    font-size: 4em;
+    letter-spacing: 4px; }
 
 .parallax {
   perspective: 1px;
@@ -32,7 +34,8 @@ header {
   .parallax .group {
     position: relative;
     height: 100vh;
-    transform-style: preserve-3d; }
+    transform-style: preserve-3d;
+    background: 50% 50% / cover; }
     .parallax .group .layer-base {
       position: absolute;
       top: 0;
@@ -43,7 +46,9 @@ header {
       .parallax .group .layer-base .text {
         background-color: #de9d77;
         padding: 20px;
-        top: -20px; }
+        top: -20px;
+        font-family: "Zilla Slab", serif;
+        font-size: 1.5em; }
     .parallax .group .layer-back {
       position: absolute;
       top: 0;
@@ -51,6 +56,17 @@ header {
       bottom: 0;
       left: 0;
       transform: translateZ(-1px) scale(2); }
+
+#one {
+  background: url("../img/rt1.png") 50% 50% no-repeat;
+  background-size: cover; }
+
+#two {
+  background: url("../img/rt4.jpg") 50% 50% no-repeat;
+  background-size: cover; }
+
+#group2 {
+  top: 1000px; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
