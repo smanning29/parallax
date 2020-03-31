@@ -12,7 +12,7 @@
 	// flex-wrap:wrap; 
 	// flex-direction:row; 
 	// align-content:flex-start; 
-    // align-items:stretch;
+  // align-items:stretch;
     
     position: fixed;
     top: 0;
@@ -21,8 +21,7 @@
     bottom: 0;
     perspective: 1px;
     overflow-x: hidden;
-    overflow-y: hidden;
-    background: $bg-color;
+    overflow-y: auto;
     height: 100%;
  } 
 
@@ -84,12 +83,13 @@
 // }
 
 .parallax {
-  height: 1000px;
+  height: auto;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
   .group {
-    height: 1000px;
+    height: 100vw;
+    max-height: 1000px;
     background: 50% 50% / cover;
     .layer-base {
       position: absolute;
@@ -117,6 +117,7 @@
   background: url("../img/rt1.png") no-repeat center center fixed;
   background-size: cover;
 }
+
 
 #two {
   top: 1000px;
@@ -157,4 +158,66 @@
 
 #group5 {
   top: 4000px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    //background-color: $sky;
+    padding: 5px;
+    h1 {
+     text-align: center;
+     color: white;
+     font-family: $display-font;
+     font-size: 2em;
+     letter-spacing: 4px;
+    }
+  }
+
+  .parallax {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+    .group {
+      height: 500px;
+      background: 50% 50% / cover;
+      .layer-base {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateZ(0);
+        .text {
+          background-color: $sky;
+          padding: 20px;
+          top: -20px;
+          font-family: $body-font;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  #group1 {
+    top: 100px;
+  }
+
+  #two #group2{
+    top: 1000px;
+  }
+
+  #three #group3{
+    top: 1500px;
+  }
+  // #group3{
+  //   top: 1000px;
+  // }
+
+  #four #group4{
+    top: 2000px;
+  }
+
+  #five #group5{
+    top: 2500px;
+  }
 }

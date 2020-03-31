@@ -7,8 +7,7 @@
   bottom: 0;
   perspective: 1px;
   overflow-x: hidden;
-  overflow-y: hidden;
-  background: #c6ecf7;
+  overflow-y: auto;
   height: 100%; }
 
 div {
@@ -27,12 +26,13 @@ header {
     letter-spacing: 4px; }
 
 .parallax {
-  height: 1000px;
+  height: auto;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px; }
   .parallax .group {
-    height: 1000px;
+    height: 100vw;
+    max-height: 1000px;
     background: 50% 50% / cover; }
     .parallax .group .layer-base {
       position: absolute;
@@ -87,6 +87,47 @@ header {
 
 #group5 {
   top: 4000px; }
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 5px; }
+    header h1 {
+      text-align: center;
+      color: white;
+      font-family: "Alfa Slab One", cursive;
+      font-size: 2em;
+      letter-spacing: 4px; }
+  .parallax {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px; }
+    .parallax .group {
+      height: 500px;
+      background: 50% 50% / cover; }
+      .parallax .group .layer-base {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateZ(0); }
+        .parallax .group .layer-base .text {
+          background-color: #B0C7FF;
+          padding: 20px;
+          top: -20px;
+          font-family: "Zilla Slab", serif;
+          font-size: 1.5em; }
+  #group1 {
+    top: 100px; }
+  #two #group2 {
+    top: 1000px; }
+  #three #group3 {
+    top: 1500px; }
+  #four #group4 {
+    top: 2000px; }
+  #five #group5 {
+    top: 2500px; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
