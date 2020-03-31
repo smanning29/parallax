@@ -23,6 +23,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
+    background-color: $sky;
  } 
 
 
@@ -35,13 +36,12 @@
  }
 
  header {
-   //background-color: $sky;
-   padding: 5px;
+   background-color: $sky;
    h1 {
     text-align: center;
     color: white;
     font-family: $display-font;
-    font-size: 4em;
+    font-size: 3em;
     letter-spacing: 4px;
    }
  }
@@ -87,12 +87,31 @@
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 300px;
+  z-index: 2;
+
+  display:flex;
+  flex-wrap:wrap; 
+  flex-direction:row; 
+  align-content:flex-start; 
+  justify-content: center;
+  align-items:stretch;
+
   .group {
     height: 100vw;
     max-height: 1000px;
+    width: 100%;
     background: 50% 50% / cover;
+
+    display:flex;
+    flex-wrap:wrap; 
+    flex-direction:row; 
+    justify-content: center;
+    align-items:flex-end;
+    
     .layer-base {
-      position: absolute;
+      //position: absolute;
+      align-self: flex-end;
+      width: 100%;
       top: 0;
       right: 0;
       bottom: 0;
@@ -105,6 +124,9 @@
         font-family: $body-font;
         font-size: 1.5em;
       }
+    }
+    header {
+      align-self: flex-start;
     }
   }
 }
@@ -120,104 +142,34 @@
 
 
 #two {
-  top: 1000px;
-  height: 700px;
   background: url("../img/rt5.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-#group2 {
-  top: 1000px;
-}
-
 #three {
-  top: 1700px;
   background: url("../img/rt4.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-#group3 {
-  top: 1900px;
-}
-
 #four {
-  top: 2700px;
   background: url("../img/rt6.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-#group4 {
-  top: 2900px;
-}
-
 #five {
-  top: 4000px;
   background: url("../img/rt10.png") no-repeat center center fixed;
   background-size: cover;
 }
 
-#group5 {
-  top: 4000px;
-}
 
 @media only screen and (max-width: 600px) {
   header {
-    //background-color: $sky;
-    padding: 5px;
+    background-color: none;
     h1 {
-     text-align: center;
-     color: white;
-     font-family: $display-font;
      font-size: 2em;
-     letter-spacing: 4px;
     }
   }
-
-  .parallax {
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 300px;
-    .group {
-      height: 500px;
-      background: 50% 50% / cover;
-      .layer-base {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        transform: translateZ(0);
-        .text {
-          background-color: $sky;
-          padding: 20px;
-          top: -20px;
-          font-family: $body-font;
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
-  #group1 {
-    top: 100px;
-  }
-
-  #two #group2{
-    top: 1000px;
-  }
-
-  #three #group3{
-    top: 1500px;
-  }
-  // #group3{
-  //   top: 1000px;
-  // }
-
-  #four #group4{
-    top: 2000px;
-  }
-
-  #five #group5{
-    top: 2500px;
+  #container {
+    background-color: none;
   }
 }
